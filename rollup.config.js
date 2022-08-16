@@ -7,6 +7,6 @@ const codecs = ['zlib', 'gzip', 'blosc', 'lz4', 'zstd'];
 
 export default {
   input: ['index', ...codecs].map(d => `./src/${d}.ts`),
-  output: { dir: './dist', format: 'esm' },
+  output: { dir: './dist', format: 'cjs' },
   plugins: [ base64(), resolve(), esbuild() ],
 };
